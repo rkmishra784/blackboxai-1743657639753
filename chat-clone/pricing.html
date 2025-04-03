@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing | AI Chat Clone</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/custom.css">
+</head>
+<body class="font-inter bg-gray-50">
+    <!-- Header -->
+    <div id="header"></div>
+    <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('header').innerHTML = data);
+    </script>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <h1 class="text-4xl font-bold text-center mb-12">Simple, Transparent Pricing</h1>
+        
+        <div class="grid md:grid-cols-3 gap-8">
+            <!-- Free Tier -->
+            <div class="pricing-card">
+                <h3 class="text-2xl font-semibold">Free</h3>
+                <div class="price text-4xl font-bold my-4">$0<span class="text-lg text-gray-500">/month</span></div>
+                <ul class="space-y-3 mb-6">
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-green-500 mr-2"></i>
+                        <span>20 messages/day</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-green-500 mr-2"></i>
+                        <span>Basic responses</span>
+                    </li>
+                    <li class="flex items-center text-gray-400">
+                        <i class="fas fa-times text-red-400 mr-2"></i>
+                        <span>No priority support</span>
+                    </li>
+                </ul>
+                <button class="btn-primary w-full">Get Started</button>
+            </div>
+
+            <!-- Pro Tier -->
+            <div class="pricing-card border-2 border-blue-500 transform scale-105">
+                <div class="bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-medium mb-4 inline-block">Most Popular</div>
+                <h3 class="text-2xl font-semibold">Pro</h3>
+                <div class="price text-4xl font-bold my-4">$20<span class="text-lg text-gray-500">/month</span></div>
+                <ul class="space-y-3 mb-6">
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-green-500 mr-2"></i>
+                        <span>500 messages/day</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-green-500 mr-2"></i>
+                        <span>Advanced responses</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-green-500 mr-2"></i>
+                        <span>Priority support</span>
+                    </li>
+                </ul>
+                <button class="btn-primary w-full">Upgrade Now</button>
+            </div>
+
+            <!-- Enterprise Tier -->
+            <div class="pricing-card">
+                <h3 class="text-2xl font-semibold">Enterprise</h3>
+                <div class="price text-4xl font-bold my-4">Custom</div>
+                <ul class="space-y-3 mb-6">
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-green-500 mr-2"></i>
+                        <span>Unlimited messages</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-green-500 mr-2"></i>
+                        <span>Dedicated instance</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-green-500 mr-2"></i>
+                        <span>24/7 support</span>
+                    </li>
+                </ul>
+                <button class="btn-primary w-full">Contact Sales</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+    <script>
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('footer').innerHTML = data);
+    </script>
+</body>
+</html>
