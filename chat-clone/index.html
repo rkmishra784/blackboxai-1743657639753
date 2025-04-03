@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Chat Clone</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/custom.css">
+</head>
+<body class="font-inter bg-gray-50">
+    <!-- Header -->
+    <div id="header"></div>
+    <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('header').innerHTML = data);
+    </script>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <!-- Hero section -->
+        <section class="py-20 px-4 bg-gradient-to-r from-blue-500 to-indigo-600 text-white">
+            <div class="max-w-4xl mx-auto text-center">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6">Talk to Our AI Assistant</h1>
+                <p class="text-xl mb-8">Get instant answers to your questions with our advanced AI technology</p>
+                <button class="bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition">Try Now</button>
+            </div>
+        </section>
+
+        <!-- Chat Demo Section -->
+        <section class="mt-16">
+            <h2 class="text-3xl font-bold text-center mb-8">Try Our AI Chat</h2>
+            <div class="max-w-2xl mx-auto">
+                <div class="chat-message">
+                    <p>User: How does AI work?</p>
+                </div>
+                <div class="chat-response">
+                    <p>AI: Artificial intelligence works by processing large amounts of data and identifying patterns to make predictions or decisions. Our system uses advanced machine learning algorithms to understand and respond to your questions.</p>
+                </div>
+                <div class="mt-4">
+                    <input type="text" placeholder="Type your message..." class="w-full p-3 border rounded-lg">
+                    <button class="btn-primary mt-2">Send</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Preview -->
+        <section class="mt-20">
+            <h2 class="text-3xl font-bold text-center mb-8">Key Features</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="p-6 bg-white rounded-lg shadow">
+                    <i class="fas fa-language text-blue-600 text-3xl mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Multilingual</h3>
+                    <p class="text-gray-600">Supports 40+ languages with accurate translations</p>
+                </div>
+                <div class="p-6 bg-white rounded-lg shadow">
+                    <i class="fas fa-bolt text-blue-600 text-3xl mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Fast Responses</h3>
+                    <p class="text-gray-600">Get answers in seconds with our optimized AI</p>
+                </div>
+                <div class="p-6 bg-white rounded-lg shadow">
+                    <i class="fas fa-lock text-blue-600 text-3xl mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Secure</h3>
+                    <p class="text-gray-600">Enterprise-grade security for all your conversations</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+    <script>
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('footer').innerHTML = data);
+    </script>
+</body>
+</html>
